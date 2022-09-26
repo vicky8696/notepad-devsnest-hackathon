@@ -23,11 +23,6 @@ bold.innerHTML = "B";
 underline.innerHTML = "U";
 copy.innerHTML = "C";
 
-console.log(bold);
-console.log(underline);
-console.log(copy);
-console.log(articleElement);
-
 // Click event listeners
 newNoteButton.addEventListener("click", displayNoteForm);
 closeButton.addEventListener("click", closeNoteForm);
@@ -71,12 +66,10 @@ function displayNoteForm() {
 // Create and render the new note on UI
 function createNote(e) {
   e.preventDefault();
-  console.log(noteSection);
 
   divLeft.appendChild(bold);
   divLeft.appendChild(underline);
   divRight.appendChild(copy);
-
 
   footer.appendChild(divLeft);
   footer.appendChild(divRight);
@@ -86,13 +79,8 @@ function createNote(e) {
   articleElement.appendChild(div)
   articleElement.appendChild(footer)
 
-  console.log(pNoteElement);
-
-  console.log(bold);
   noteSection.appendChild(articleElement.cloneNode(true));
   
-  console.log(footer)
-
   document.querySelector(".input-form").style.display = "none";
   inputTitle.value = "";
   inputNote.value = "";
